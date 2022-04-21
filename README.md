@@ -8,3 +8,5 @@
  -Uses collision to detect when bullets hit and when the player is touched by a bad guy
 
 The code is real messy. Next time I make a game in pygame(I won't be making another game with pygame) I'm definitely going to use classes for each level state instead of what I did here... But hey, it works!
+
+![Gun Knight Boss](https://i.imgur.com/in6ylup.png "THE CAPYBARA")
