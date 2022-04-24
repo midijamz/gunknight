@@ -8,21 +8,21 @@ pygame.display.set_caption("GUN KNIGHT")
 
 FPS = 60
 
-PLAYER_IMAGE = pygame.image.load(os.path.join('Assets','player.png'))
-LEVEL_ONE = pygame.image.load(os.path.join('Assets','level1.png'))
-LEVEL_TWO = pygame.image.load(os.path.join('Assets','bosstime.png'))
-SLIME_IMAGE = pygame.image.load(os.path.join('Assets','slime.png'))
-GAME_OVER_IMAGE = pygame.image.load(os.path.join('Assets','gameover.png'))
-TITLE_IMAGE = pygame.image.load(os.path.join('Assets','gun knight.png'))
-CAPYBARA = pygame.image.load(os.path.join('Assets','capybara.png'))
-TRAPPED = pygame.image.load(os.path.join('Assets','trapped.png'))
-FLYER = pygame.image.load(os.path.join('Assets','flyer.png'))
+PLAYER_IMAGE = pygame.image.load(os.path.join('Assets/Entities','player.png'))
+LEVEL_ONE = pygame.image.load(os.path.join('Assets/Levels','level1.png'))
+LEVEL_TWO = pygame.image.load(os.path.join('Assets/Levels','bosstime.png'))
+SLIME_IMAGE = pygame.image.load(os.path.join('Assets/Entities','slime.png'))
+GAME_OVER_IMAGE = pygame.image.load(os.path.join('Assets/Levels','gameover.png'))
+TITLE_IMAGE = pygame.image.load(os.path.join('Assets/Levels','gun knight.png'))
+CAPYBARA = pygame.image.load(os.path.join('Assets/Entities','capybara.png'))
+TRAPPED = pygame.image.load(os.path.join('Assets/Entities','trapped.png'))
+FLYER = pygame.image.load(os.path.join('Assets/Entities','flyer.png'))
 pygame.mouse.set_visible(False)
-CURSOR_IMAGE = pygame.image.load(os.path.join('Assets','cursor.png')).convert_alpha()
+CURSOR_IMAGE = pygame.image.load(os.path.join('Assets/Entities','cursor.png')).convert_alpha()
 pygame.font.init()
 BOSS_HP = pygame.font.SysFont('comicsans', 10)
-WINNER_IMAGE = pygame.image.load(os.path.join('Assets','winner.png'))
-TRANSITION = pygame.image.load(os.path.join('Assets','transition.png'))
+WINNER_IMAGE = pygame.image.load(os.path.join('Assets/Levels','winner.png'))
+TRANSITION = pygame.image.load(os.path.join('Assets/Levels','transition.png'))
 
 WHITE = (255, 255, 255)
 
@@ -224,11 +224,11 @@ def capybara_movement(capybara,capybara_hp,x,y):
 
 def main():
     pygame.mixer.init()
-    pygame.mixer.music.load(os.path.join('Assets','newbie.wav'))
-    gun_cocked = pygame.mixer.Sound(os.path.join('Assets','gun_cocking.wav'))
-    shoot = pygame.mixer.Sound(os.path.join('Assets','shoot.wav'))
-    oof = pygame.mixer.Sound(os.path.join('Assets','oof.wav'))
-    waaa = pygame.mixer.Sound(os.path.join('Assets','waaa.wav'))
+    pygame.mixer.music.load(os.path.join('Assets/Music','newbie.wav'))
+    gun_cocked = pygame.mixer.Sound(os.path.join('Assets/SFX','gun_cocking.wav'))
+    shoot = pygame.mixer.Sound(os.path.join('Assets/SFX','shoot.wav'))
+    oof = pygame.mixer.Sound(os.path.join('Assets/SFX','oof.wav'))
+    waaa = pygame.mixer.Sound(os.path.join('Assets/SFX','waaa.wav'))
     oof.set_volume(0.3)
     waaa.set_volume(0.25)
 
@@ -435,7 +435,7 @@ def main():
 
             if boss_fight and not boss_trigger:
                 boss_trigger = True
-                pygame.mixer.music.load(os.path.join('Assets','afterparty.wav'))
+                pygame.mixer.music.load(os.path.join('Assets/Music','afterparty.wav'))
                 pygame.mixer.music.set_volume(0.4)
                 pygame.mixer.music.play(-1)
                 
